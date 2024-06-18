@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    /* background-color: bisque; */
+}
+.content-container{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.content{
+    background-color: cyan;
+    border: solid 4px;
+    border-radius: 10px;
+    padding: 100px;
+}
+.content table{
+    /* width: 70%; */
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.content table th,table td{
+    margin: auto;
+    border: 1px solid black;
+    padding: 10px;
+}
+.content form{
+    margin-top: 10px;
+}
+.button{
+    text-decoration: none;
+    background-color: red;
+    border: 1px red;
+    border-radius: 10px;
+    padding: 2px;
+}

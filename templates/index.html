@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{%block content%}
+<div class="content-container">
+    <div class="content">
+        <h1>ToDo Maker</h1>
+        {% if todos%}
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for todo in todos%}
+                    <tr>
+                        <td>{{todo.task_content}}</td>
+                        <td>{{todo.time}}</td>
+                        <td>
+                            <a class="button" href="/update/{{todo.id}}">update</a>
+                            <br>
+                            <a class="button" href="/delete/{{todo.id}}">delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form action="/" method="post">
+            <input name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+        {%else%}
+        <form action="/" method="post">
+            <input name="content" id="content">
+            <input type="submit" value="Add Task">
+        </form>
+        {%endif%}
+    </div>
+</div>
+{%endblock%}
